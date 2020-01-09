@@ -1,0 +1,16 @@
+# ---------------------- #
+#       GIT IGNORE       #
+# ---------------------- #
+
+#System
+.DS_Store
+
+# Directories
+node_modules
+.next
+next
+
+# Files
+yarn*
+*.lock*
+*.log
