@@ -1,0 +1,30 @@
+{
+    "author": "Jorge Méndez Ortega <jorge.mendez.ortega@gmail.com>",
+    "description": "Taller Basico de NextJS",
+    "keywords": [
+        "Next",
+        "Taller",
+        "WorkShop",
+        "JavaScript",
+        "React",
+        "Router"
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "name": "WorksShop-next",
+    "repository": {
+        "type": "git",
+        "url": "git@GitHub:OrcaPracticas/workshop-next.git"
+    },
+    "scripts": {},
+    "version": "1.0.0",
+    "dependencies": {
+        "isomorphic-fetch": "2.2.1",
+        "next": "9.1.7",
+        "next-routes": "1.4.2",
+        "nprogress": "0.2.0",
+        "prop-types": "15.7.2",
+        "react": "16.12.0",
+        "react-dom": "16.12.0"
+    }
+}
