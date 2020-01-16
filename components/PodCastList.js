@@ -3,7 +3,11 @@ import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
 
-
+/**
+ * Listdado de los ultimos podcast.
+ *
+ * @param {Object} props Propiedades.
+ */
 const PodCastList = ({ podcasts }) => (
     <div>
         {
