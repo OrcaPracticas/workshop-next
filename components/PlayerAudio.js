@@ -1,8 +1,13 @@
 import PropTypes from "prop-types";
 import React, { Fragment } from "react";
 
+/**
+ * Listdado de los ultimos podcast.
+ *
+ * @param {Object} props Propiedades.
+ */
 const PlayerAudio = ({
-    audio, channel,
+    audioMp3, channel,
     poster, title,
 }) => (
     <Fragment>
@@ -13,7 +18,7 @@ const PlayerAudio = ({
             <h3>{ title }</h3>
             <h6>{ channel }</h6>
             <audio controls autoPlay>
-                <source src={audio} type="audio/mpeg" />
+                <source src={audioMp3} type="audio/mpeg" />
             </audio>
             <style jsx>
                 {`
@@ -41,14 +46,14 @@ const PlayerAudio = ({
 );
 
 PlayerAudio.propType = {
-    audio: PropTypes.string,
+    audioMp3: PropTypes.string,
     channel: PropTypes.string,
     poster: PropTypes.string,
     title: PropTypes.string,
 };
 
 PlayerAudio.defaultProps = {
-    audio: "",
+    audioMp3: "",
     channel: "",
     poster: "",
     title: "",
