@@ -13,7 +13,7 @@ const PlayerAudio = ({
     <Fragment>
         <div className="player">
             <picture>
-                <div style={{ backgroundImage: `url(${poster}})` }} />
+                <img src={poster} alt={title} />
             </picture>
             <h3>{ title }</h3>
             <h6>{ channel }</h6>
@@ -55,7 +55,7 @@ PlayerAudio.propType = {
 PlayerAudio.defaultProps = {
     audioMp3: "",
     channel: "",
-    poster: "",
+    poster: "/default-podcast.png",
     title: "",
 };
 
