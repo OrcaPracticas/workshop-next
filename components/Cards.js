@@ -14,7 +14,7 @@ const Card = ({ channels }) => (
             channels.map((channel) => {
                 const {
                     title, id,
-                    logo, uri,
+                    logo = "/default-podcast.png", uri,
                 } = channel;
                 return (
                     <Link href={uri} key={`Card-${id}`} prefetch>
