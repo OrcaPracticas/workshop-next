@@ -1,0 +1,56 @@
+{
+    "audio": {
+        "audioMp3": "https://audio.theabcdn.com/attachments/23578755/some-15-years-after-joining-rovers-gordon-greer-is-set-to-make-his-league-debut-in-the-coming-weeks-.mp3?audio_clip_id=4903323&stream_id=4938462&sub=ex&Expires=1579280172&Signature=whvas5vqKrjurztcUvXZy8bJJ3oU726xixfm7CV~fj~i90KoTSv81JPaTvde8j-noFyBHZOoIBz8p2NBlGhNRr7nB1RXg~kkNTBFpyJ09CByGZyq7FMflx~PGwKSwbacH8g9n3bmK~yZV9WOkAzF~TALwFn3B6OpGzecv5Yb3Zg_&Key-Pair-Id=APKAIVRAZ4UQUDAT3NHA",
+        "channel": "Dummy",
+        "poster": "https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Record-Player-512.png",
+        "title": "dummy"
+    },
+    "cards": {
+        "channels": [
+            {
+                "id": "001",
+                "logo": "https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Record-Player-512.png",
+                "title": "Card 1",
+                "uri": "./"
+            },
+            {
+                "id": "002",
+                "title": "Card 2",
+                "uri": "./"
+            },
+            {
+                "id": "003",
+                "title": "Card 3",
+                "uri": "./"
+            }
+        ]
+    },
+    "layout": {
+        "header": {
+            "subTitle": "Canal Dummy",
+            "type": "channel"
+        }
+    },
+    "list": {
+        "podcasts": [
+            {
+                "duration": 400,
+                "id": "001",
+                "title": "Podcst 001",
+                "uri": "http://google.com"
+            },
+            {
+                "duration": 4000,
+                "id": "002",
+                "title": "Podcst 002",
+                "uri": "http://google.com"
+            },
+            {
+                "duration": 40000,
+                "id": "003",
+                "title": "Podcst 003",
+                "uri": "http://google.com"
+            }
+        ]
+    }
+}
