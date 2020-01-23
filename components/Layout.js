@@ -21,7 +21,7 @@ const Layout = ({ children, header }) => (
                     font-family: system-ui;
                     background: white;
                 }
-                h2 {
+                :h2 {
                     padding: 5px;
                     font-size: 1.3em;
                     font-weight: 600;

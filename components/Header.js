@@ -50,7 +50,7 @@ const Header = (props) => {
 
                     .banner {
                       width: 100%;
-                      padding-bottom: 25%;
+                      padding-bottom: 15%;
                       background-position: 50% 50%;
                       background-size: 100% 100%;
                       background-color: #aaa;

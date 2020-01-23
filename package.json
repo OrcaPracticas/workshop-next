@@ -27,7 +27,7 @@
         "url": "git@GitHub:OrcaPracticas/workshop-next.git"
     },
     "scripts": {
-        "dev": "next",
+        "dev": "next -p 8080",
         "build": "next build",
         "start": "next start"
     },
