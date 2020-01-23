@@ -1,5 +1,7 @@
+// Dependencias
 import React from "react";
 
+// Componentes
 import { audio, layout, cards, list } from "./mockup.json";
 import {
     Cards, Layout,

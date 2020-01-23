@@ -1,7 +1,9 @@
+// Dependencias
 import PropTypes from "prop-types";
 import React from "react";
 import "isomorphic-fetch";
 
+// Componentes
 import { Cards, Layout } from "../components";
 import { api, recommend } from "./config.json";
 import Tools from "../Tools";

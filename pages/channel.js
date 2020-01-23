@@ -1,7 +1,9 @@
+// Dependencias
 import PropTypes from "prop-types";
 import React, { Fragment } from "react";
 import "isomorphic-fetch";
 
+// Componentes
 import { Cards, Layout, PodCastList } from "../components";
 import {
     api, audio,
