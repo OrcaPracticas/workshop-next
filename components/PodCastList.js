@@ -16,7 +16,7 @@ const PodCastList = ({ podcasts }) => (
                     duration, id, title, uri,
                 } = podcast;
                 return (
-                    <Link href={uri} key={`List-${id}`} prefetch>
+                    <Link href={uri} key={`List-${id}`}>
                         <a className="podcast" href={uri}>
                             <h3>{ title }</h3>
                             <div className="meta">

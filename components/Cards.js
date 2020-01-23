@@ -17,7 +17,7 @@ const Card = ({ channels }) => (
                     logo = "/default-podcast.png", uri,
                 } = channel;
                 return (
-                    <Link href={uri} key={`Card-${id}`} prefetch>
+                    <Link href={uri} key={`Card-${id}`}>
                         <a className="channel" href={uri}>
                             <img src={logo} alt={title} />
                             <h3>{title}</h3>
