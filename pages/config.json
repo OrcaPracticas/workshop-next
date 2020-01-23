@@ -2,6 +2,6 @@
     "api": "https://api.audioboom.com",
     "audio": "/audio_clips",
     "channel": "/channels/{id}",
-    "child": "child_channels",
+    "child": "/child_channels",
     "recommend": "/channels/recommended"
 }
