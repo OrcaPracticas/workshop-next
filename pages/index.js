@@ -4,7 +4,7 @@ import "isomorphic-fetch";
 
 import { Cards, Layout } from "../components";
 import { api, recommend } from "./config.json";
-
+import Tools from "../Tools";
 
 /**
  * Pagina principal.
@@ -28,16 +28,7 @@ Index.getInitialProps = async ({ res }) => {
     try {
         const REQUEST = await fetch(`${api}${recommend}`);
         const { body: channels } = await REQUEST.json();
-        RESPOSE.channels = channels.map((channel) => {
-            const { id, title, urls = {} } = channel;
-            const { logo_image: { original = "" } } = urls;
-            return {
-                id,
-                logo: original,
-                title,
-                uri: `/channel?id=${id}`,
-            };
-        });
+        RESPOSE.channels = Tools.getDataCard(channels);
         RESPOSE.statusCode = 200;
     } catch (error) {
         res.statusCode = 503;
