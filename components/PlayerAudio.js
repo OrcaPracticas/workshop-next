@@ -1,6 +1,6 @@
 // Dependencias
 import PropTypes from "prop-types";
-import React, { Fragment } from "react";
+import React from "react";
 
 /**
  * Listdado de los ultimos podcast.
@@ -11,7 +11,7 @@ const PlayerAudio = ({
     audioMp3, channel,
     poster, title,
 }) => (
-    <Fragment>
+    <>
         <div className="player">
             <picture>
                 <img src={poster} alt={title} />
@@ -40,10 +40,26 @@ const PlayerAudio = ({
                         margin-top: 2em;
                         width: 100%;
                     }
+                  picture {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex: 1 1;
+                    flex-direction: column;
+                    width: auto;
+                    padding: 10%;
+                  }
+                  picture img {
+                    width: 320px;
+                    height: 320px;
+                    background-position: 50% 50%;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                  }
                 `}
             </style>
         </div>
-    </Fragment>
+    </>
 );
 
 PlayerAudio.propType = {
