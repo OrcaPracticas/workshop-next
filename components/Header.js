@@ -2,7 +2,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import PropTypes from "prop-types";
-import React, { Fragment } from "react";
+import React from "react";
 
 /**
  * Header general correspondientes a las paginas del sitio.
@@ -16,7 +16,7 @@ const Header = (props) => {
     } = props;
 
     return (
-        <Fragment>
+        <>
             <Head>
                 <link rel="icon" type="./favicon.ico" />
                 <title>
@@ -34,10 +34,10 @@ const Header = (props) => {
             </header>
             {
                 (type === "channel") && (
-                    <Fragment>
+                    <>
                         <div className="banner" />
                         <h1>{subTitle}</h1>
-                    </Fragment>
+                    </>
                 )
             }
             <style jsx>
@@ -70,7 +70,7 @@ const Header = (props) => {
                     }
                 `}
             </style>
-        </Fragment>
+        </>
     );
 };
 

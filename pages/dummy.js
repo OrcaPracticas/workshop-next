@@ -1,11 +1,11 @@
 // Dependencias
-import React, { Fragment } from "react";
+import React from "react";
 
 /**
  * Componente basico para el demo.
  */
 const Index = () => (
-    <Fragment>
+    <>
         <img src="/groot.png" alt="Groot" />
         <h1>Creado por JMZ</h1>
         <h2>WorkShop NextJS</h2>
@@ -26,7 +26,7 @@ const Index = () => (
             }
         `}
         </style>
-    </Fragment>
+    </>
 );
 
 export default Index;

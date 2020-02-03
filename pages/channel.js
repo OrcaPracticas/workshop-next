@@ -1,6 +1,6 @@
 // Dependencias
 import PropTypes from "prop-types";
-import React, { Fragment } from "react";
+import React from "react";
 import "isomorphic-fetch";
 
 // Componentes
@@ -22,19 +22,19 @@ const Channel = ({ channels, header, list }) => (
     <Layout header={header}>
         {
             (channels.length > 0) && (
-                <Fragment>
+                <>
                     <h2>Series</h2>
                     <Cards channels={channels} />
-                </Fragment>
+                </>
             )
         }
 
         {
             (list.length > 0) && (
-                <Fragment>
+                <>
                     <h2>Ultimos Podcasts</h2>
                     <PodCastList podcasts={list} />
-                </Fragment>
+                </>
             )
         }
 
