@@ -6,6 +6,7 @@ import "isomorphic-fetch";
 // Componentes
 import { Cards, Layout } from "../components";
 import { api, recommend } from "./config.json";
+import Error from "./_error";
 import Tools from "../Tools";
 
 /**
@@ -13,9 +14,13 @@ import Tools from "../Tools";
  *
  * @param {Array} channels Listado de tarjetas.
  */
-const Index = ({ channels }) => (
+const Index = ({ channels, statusCode }) => (
     <Layout>
-        <Cards channels={channels} />
+        {
+            (statusCode !== 200)
+                ? <Error statusCode={statusCode} />
+                : <Cards channels={channels} />
+        }
     </Layout>
 );
 
@@ -26,12 +31,18 @@ const Index = ({ channels }) => (
  * @return {Promise}
  */
 Index.getInitialProps = async ({ res }) => {
-    const RESPOSE = { channels: [], statusCode: 503 };
+    const RESPOSE = { channels: [], statusCode: 200 };
     try {
         const REQUEST = await fetch(`${api}${recommend}`);
-        const { body: channels } = await REQUEST.json();
-        RESPOSE.channels = Tools.getDataCard(channels);
-        RESPOSE.statusCode = 200;
+        const { status } = await REQUEST;
+        if (status >= 400) {
+            res.statusCode = status;
+            RESPOSE.statusCode = status;
+        } else {
+            const { body: channels } = await REQUEST.json();
+            RESPOSE.channels = Tools.getDataCard(channels);
+            RESPOSE.statusCode = 200;
+        }
     } catch (error) {
         res.statusCode = 503;
     }
@@ -40,10 +51,12 @@ Index.getInitialProps = async ({ res }) => {
 
 Index.propTypes = {
     channels: PropTypes.arrayOf(PropTypes.shape({})),
+    statusCode: PropTypes.number,
 };
 
 Index.defaultProps = {
     channels: [],
+    statusCode: 404,
 };
 
 export default Index;
