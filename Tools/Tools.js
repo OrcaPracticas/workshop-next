@@ -1,5 +1,5 @@
 class Tools {
-    static getDataCard(data, link = "/channel") {
+    static getDataCard(data = [], link = "/channel") {
         const DATA = data.map((item) => {
             const { id, title, urls = {} } = item;
             const { logo_image: { original = "" } } = urls;
