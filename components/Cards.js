@@ -1,7 +1,8 @@
 // Dependencias
-import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
+
+import { Link } from "../router";
 
 /**
  * Información por cada canal habilitado.
@@ -17,8 +18,8 @@ const Card = ({ channels }) => (
                     logo = "/default-podcast.png", uri,
                 } = channel;
                 return (
-                    <Link href={uri} key={`Card-${id}`}>
-                        <a className="channel" href={uri}>
+                    <Link route="channel" params={uri} key={`Card-${id}`}>
+                        <a className="channel" >
                             <img src={logo} alt={title} />
                             <h3>{title}</h3>
                         </a>

@@ -62,7 +62,10 @@ PodCast.getInitialProps = async ({ query, res }) => {
             RESPOSE.player.channel = channel.title;
             RESPOSE.player.poster = urls.image;
             RESPOSE.player.title = title;
-            RESPOSE.header.back = `/channel?id=${channel.id}`;
+            RESPOSE.header.back = {
+                slug: channel.title.toLocaleLowerCase().replace(/\s/g, "-"),
+                id: channel.id,
+            };
         }
     } catch (error) {
         res.statusCode = 503;

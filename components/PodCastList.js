@@ -1,7 +1,8 @@
 // Dependencias
-import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
+
+import { Link } from "../router";
 
 /**
  * Listdado de los ultimos podcast.
@@ -16,8 +17,8 @@ const PodCastList = ({ podcasts }) => (
                     duration, id, title, uri,
                 } = podcast;
                 return (
-                    <Link href={uri} key={`List-${id}`}>
-                        <a className="podcast" href={uri}>
+                    <Link route="podcast" params={uri} key={`List-${id}`}>
+                        <a className="podcast">
                             <h3>{ title }</h3>
                             <div className="meta">
                                 {`${Math.ceil(duration / 60)} minutes`}

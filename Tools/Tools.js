@@ -3,11 +3,15 @@ class Tools {
         const DATA = data.map((item) => {
             const { id, title, urls = {} } = item;
             const { logo_image: { original = "" } } = urls;
+
             return {
                 id,
                 logo: original,
                 title,
-                uri: `${link}?id=${id}`,
+                uri: {
+                    slug: title.toLocaleLowerCase().replace(/\s/g, "-"),
+                    id,
+                },
             };
         });
         return DATA;
@@ -17,13 +21,18 @@ class Tools {
         const DATA = data.map((item) => {
             const {
                 id, duration,
-                title,
+                channel, title,
             } = item;
             return {
                 id,
                 duration,
                 title,
-                uri: `${link}?id=${id}`,
+                uri: {
+                    slugChannel: channel.title.toLocaleLowerCase().replace(/\s/g, "-"),
+                    idChannel: channel.id,
+                    slug: title.toLocaleLowerCase().replace(/\s/g, "-"),
+                    id,
+                },
             };
         });
         return DATA;
