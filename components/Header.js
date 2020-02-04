@@ -1,8 +1,9 @@
 // Dependencias
 import Head from "next/head";
-import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
+
+import { Link } from "../router";
 
 /**
  * Header general correspondientes a las paginas del sitio.
@@ -26,8 +27,8 @@ const Header = (props) => {
             <header>
                 {
                     (back) ? (
-                        <Link href={back}>
-                            <a className="back" href={back}>&lt; Regresar </a>
+                        <Link route="channel" params={back}>
+                            <a className="back" > &lt; Regresar </a>
                         </Link>
                     ) : "PodCast"
                 }

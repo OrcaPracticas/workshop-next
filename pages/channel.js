@@ -29,27 +29,27 @@ const Channel = ({
             (statusCode !== 200)
                 ? <Error statusCode={statusCode} />
                 : (
-                  <>
-                      {
-                          (channels.length > 0) && (
-                          <>
-                              <h2>Series</h2>
-                              <Cards channels={channels} />
-                          </>
-                          )
-                      }
+                    <>
+                        {
+                            (channels.length > 0) && (
+                                <>
+                                    <h2>Series</h2>
+                                    <Cards channels={channels} />
+                                </>
+                            )
+                        }
 
-                      {
-                          (list.length > 0) && (
-                          <>
-                              <h2>Ultimos Podcasts</h2>
-                              <PodCastList podcasts={list} />
-                          </>
-                          )
-                      }
+                        {
+                            (list.length > 0) && (
+                                <>
+                                    <h2>Ultimos Podcasts</h2>
+                                    <PodCastList podcasts={list} />
+                                </>
+                            )
+                        }
 
-                      <style jsx>
-                          {`
+                        <style jsx>
+                            {`
                           h2 {
                               padding: 15px;
                               font-size: 2em;
@@ -57,8 +57,8 @@ const Channel = ({
                               margin: 0;
                           }
                       `}
-                      </style>
-                  </>
+                        </style>
+                    </>
                 )
         }
     </Layout>
