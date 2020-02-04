@@ -10,17 +10,19 @@ import Header from "./Header";
  *
  * @param {Object} props Propiedades.
  */
-const Layout = ({ children, header }) => (
+const Layout = ({ children, header, hidden }) => (
     <main key="Index">
-        <Header key="header-site" {...header} />
+        {
+            (!hidden)
+                ? <Header key="header-site" {...header} />
+                : ""
+        }
         {children}
         <style jsx>
             {`
                 :global(body) {
-                    background-color: #272822;
                     margin: 0;
                     font-family: system-ui;
-                    background: white;
                 }
                 :h2 {
                     padding: 5px;
@@ -37,11 +39,13 @@ const Layout = ({ children, header }) => (
 Layout.propTypes = {
     children: PropTypes.node,
     header: PropTypes.shape({}),
+    hidden: PropTypes.bool,
 };
 
 Layout.defaultProps = {
     children: [],
     header: {},
+    hidden: false,
 };
 
 export default Layout;
