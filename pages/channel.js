@@ -108,14 +108,14 @@ Channel.getInitialProps = async ({ query, res }) => {
 
 Channel.propTypes = {
     channels: PropTypes.arrayOf(PropTypes.shape({})),
-    header: PropTypes.arrayOf(PropTypes.shape({})),
+    header: PropTypes.shape({}),
     list: PropTypes.arrayOf(PropTypes.shape({})),
     statusCode: PropTypes.number,
 };
 
 Channel.defaultProps = {
     channels: [],
-    header: [],
+    header: {},
     list: [],
     statusCode: 404,
 };

@@ -28,9 +28,13 @@ const Header = (props) => {
                 {
                     (back) ? (
                         <Link route="channel" params={back}>
-                            <a className="back" > &lt; Regresar </a>
+                            <a className="back"> ◀️ Regresar </a>
                         </Link>
-                    ) : "PodCast"
+                    ) : (
+                        <Link href="/">
+                            <a className="initial"> 🔊 PodCast </a>
+                        </Link>
+                    )
                 }
             </header>
             {
@@ -47,6 +51,13 @@ const Header = (props) => {
                       color: #FFFFFF;
                       position: relative;
                       right: 45%;
+                      font-size: 20px;
+                    }
+
+                    .initial {
+                      color: #FFFFFF;
+                      text-decoration: none;
+                      font-size: 20px;
                     }
 
                     .banner {
@@ -76,7 +87,7 @@ const Header = (props) => {
 };
 
 Header.propTypes = {
-    back: PropTypes.string,
+    back: PropTypes.shape({}),
     logo: PropTypes.string,
     subTitle: PropTypes.string,
     title: PropTypes.string,
@@ -84,7 +95,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-    back: "",
+    back: null,
     logo: "/default-hero.jpg",
     subTitle: "channel",
     title: "PodCast",
