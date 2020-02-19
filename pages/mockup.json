@@ -11,17 +11,26 @@
                 "id": "001",
                 "logo": "https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Record-Player-512.png",
                 "title": "Card 1",
-                "uri": "./"
+                "uri": {
+                "id": "3709182",
+                "slug": "demo"
+                }
             },
             {
                 "id": "002",
                 "title": "Card 2",
-                "uri": "./"
+                "uri": {
+                "id": "3709182",
+                "slug": "demo"
+                }
             },
             {
                 "id": "003",
                 "title": "Card 3",
-                "uri": "./"
+                "uri": {
+                "id": "3709182",
+                "slug": "demo"
+                }
             }
         ]
     },
@@ -36,20 +45,36 @@
             {
                 "duration": 400,
                 "id": "001",
-                "title": "Podcst 001",
-                "uri": "http://google.com"
+				"title": "Podcst 001",
+				"uri": {
+                	"idChannel": 74533700,
+                	"id": 6567235,
+                	"slug": "podcast-demo",
+                	"slugChannel": "inbox"
+				}
+
             },
             {
                 "duration": 4000,
                 "id": "002",
-                "title": "Podcst 002",
-                "uri": "http://google.com"
+				"title": "Podcst 002",
+				"uri": {
+                	"idChannel": 74533700,
+                	"id": 6567235,
+                	"slug": "podcast-demo",
+                	"slugChannel": "inbox"
+				}
             },
             {
                 "duration": 40000,
                 "id": "003",
-                "title": "Podcst 003",
-                "uri": "http://google.com"
+				"title": "Podcst 003",
+				"uri": {
+                	"idChannel": 74533700,
+                	"id": 6567235,
+                	"slug": "podcast-demo",
+                	"slugChannel": "inbox"
+				}
             }
         ]
     }
