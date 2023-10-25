@@ -2,7 +2,7 @@
     "author": "Jorge Méndez Ortega <jorge.mendez.ortega@gmail.com>",
     "dependencies": {
         "isomorphic-fetch": "2.2.1",
-        "next": "9.3.3",
+        "next": "13.5.0",
         "next-routes": "1.4.2",
         "nprogress": "0.2.0",
         "prop-types": "15.7.2",
